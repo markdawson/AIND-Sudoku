@@ -39,7 +39,9 @@ The data consists of a text file of diagonal sudokus for you to solve.
 
 ### Free Response Questions 
 **How do we apply constraint propagation to solve the naked twins problem?**
+
 When we see two boxes in the same unit, with the exactly same two possibile digits, we know that that those one of those possibilities _must_ appear in one of those two boxes and the other possibility _must_ appear in the other box. Using that contraint, we can eliminate those possibilities from all other boxes in the unit. Repeating this strategy multiple times ("propogating the contraint") might yield even more progress on the puzzle than doing it just once. 
 
 **How do we apply constraint propagation to solve the diagonal sudoku problem?**
+
 Once we have our contraints defined ("only choice", "elimination", "naked twins", etc.), all we have to do to solve a diagonal sudoku problem is include the diagonals in the "units" or groups of boxes that must contain the digits 1 through 9. If we implemented our containts in a flexbile way, then it should be easy to add the diagonals as units.
